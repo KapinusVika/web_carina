@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class PopularPrimeryComponent extends AbstractUIObject {
 
-    @FindBy(xpath = ".//li[@id='6200275']//span[@class='foreign_goods__name-secondary']")
+    @FindBy(xpath = ".//li[@class = 'foreign_goods__item g-slider__item']//img")
     private ExtendedWebElement titleLabel;
 
 
