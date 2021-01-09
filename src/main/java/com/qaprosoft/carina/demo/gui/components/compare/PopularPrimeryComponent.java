@@ -10,15 +10,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class PopularPrimeryComponent extends AbstractUIObject {
 
-    @FindBy(xpath = ".//li[@class = 'foreign_goods__item g-slider__item']//img")
+    @FindBy(xpath = "//span[@class = 'foreign_goods__name-main']")
     private ExtendedWebElement titleLabel;
-
 
     public PopularPrimeryComponent(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
-    public String getTitle() {
+    public String getName() {
+        titleLabel.assertElementPresent(18);
         return titleLabel.getText();
     }
 

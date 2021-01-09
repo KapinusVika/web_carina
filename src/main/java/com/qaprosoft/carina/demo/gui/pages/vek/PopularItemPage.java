@@ -2,17 +2,24 @@ package com.qaprosoft.carina.demo.gui.pages.vek;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
+import com.qaprosoft.carina.demo.gui.components.compare.PopularPrimeryComponent;
+import com.qaprosoft.carina.demo.gui.components.compare.ReviewsComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 public class PopularItemPage extends AbstractPage {
 
 
-    @FindBy(className = "g-price item__price cr-price__in")
-    private ExtendedWebElement price;
+    @FindBy(xpath = ".//button[@class = 'g-button g-buybtn item__buybtn cr-buybtn__in j-ga_track']")
+    private ExtendedWebElement basketButton;
 
-    @FindBy(className = "reviews-rate cr-reviews-rate-5")
-    private ExtendedWebElement reviewsFiveStars;
+    @FindBy(xpath = ".//div[@class = 'tabs__switcher']/span")
+    private ExtendedWebElement rewiewsButton;
+
+    @FindBy(xpath = "//span[@class = 'reviews-rate cr-reviews-rate-5']")
+    private List<ReviewsComponent> reviewsFiveStars;
 
     public PopularItemPage(WebDriver driver) {
         super(driver);
@@ -20,10 +27,13 @@ public class PopularItemPage extends AbstractPage {
 
     @Override
     public boolean isPageOpened() {
-        return price.isPresent();
+        return basketButton.isPresent();
     }
 
     public int getReviewsFiveStarsCount() {
-        return Integer.parseInt(reviewsFiveStars.getText());
+        rewiewsButton.click();
+        rewiewsButton.assertElementPresent(18);
+        return reviewsFiveStars.size();
     }
+
 }
