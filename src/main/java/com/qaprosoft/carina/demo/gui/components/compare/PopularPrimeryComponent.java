@@ -10,7 +10,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class PopularPrimeryComponent extends AbstractUIObject {
 
-    @FindBy(xpath = "//span[@class = 'foreign_goods__name-main']")
+
+    @FindBy(xpath = "//span[@class = 'foreign_goods__name']/a")
     private ExtendedWebElement titleLabel;
 
     public PopularPrimeryComponent(WebDriver driver, SearchContext searchContext) {
@@ -18,11 +19,12 @@ public class PopularPrimeryComponent extends AbstractUIObject {
     }
 
     public String getName() {
-        titleLabel.assertElementPresent(18);
-        return titleLabel.getText();
+        titleLabel.assertElementPresent(30);
+        return titleLabel.getAttribute("title");
     }
 
     public PopularItemPage navigateTo() {
+        titleLabel.assertElementPresent(30);
         titleLabel.click();
         return new PopularItemPage(this.driver);
     }

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class ReviewsCount extends BaseTest {
 
     private static final String ITEM_EXPECTED =
-            "Фитнес-трекер";
+            "Наушники-гарнитура Xiaomi Mi True Wireless Earbuds Basic 2 / BHR4272GL/TWSEJ061LS (черный) - ";
 
     @Test(description = "The proper item opened correct")
     @MethodOwner(owner = "kapinus")
