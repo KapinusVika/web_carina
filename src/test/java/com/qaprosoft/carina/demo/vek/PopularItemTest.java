@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class PopularItemTest extends BaseTest{
     private static final String ITEM_EXPECTED =
-            "Фитнес-трекер Xiaomi Mi Smart Band 5 / BHR4219RU";
+            "Наушники-гарнитура Xiaomi Mi True Wireless Earbuds Basic 2 / BHR4272GL/TWSEJ061LS (черный)";
 
     @Test(description = "The proper item opened correct")
     @MethodOwner(owner = "kapinus")
