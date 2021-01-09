@@ -19,7 +19,7 @@ public class BasePage extends AbstractPage {
     @FindBy(className = "logotype")
     private ExtendedWebElement logo;
 
-    @FindBy(xpath = "//li[@class = 'foreign_goods__item g-slider__item']")
+    @FindBy(xpath = "//ul[@class ='b-foreign_goods']/li")
     private List<PopularPrimeryComponent> primeryComponents;
 
     public BasePage(WebDriver driver) {

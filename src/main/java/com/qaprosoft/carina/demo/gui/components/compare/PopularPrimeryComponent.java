@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 public class PopularPrimeryComponent extends AbstractUIObject {
 
 
-    @FindBy(xpath = "//span[@class = 'foreign_goods__name']/a")
+    @FindBy(xpath = ".//span[@class = 'foreign_goods__name']/a")
     private ExtendedWebElement titleLabel;
 
     public PopularPrimeryComponent(WebDriver driver, SearchContext searchContext) {
