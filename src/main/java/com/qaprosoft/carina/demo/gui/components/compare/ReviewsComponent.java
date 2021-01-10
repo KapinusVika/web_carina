@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class ReviewsComponent extends AbstractUIObject {
 
-    @FindBy(xpath = "//li[@class = 'reviews__item']")
+    @FindBy(xpath = ".//li[@class = 'reviews__item']")
     private ExtendedWebElement rewiewsComponent;
 
     public ReviewsComponent(WebDriver driver, SearchContext searchContext) {

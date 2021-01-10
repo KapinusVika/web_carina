@@ -31,8 +31,8 @@ public class PopularItemPage extends AbstractPage {
     }
 
     public int getReviewsFiveStarsCount() {
-        rewiewsButton.click();
         rewiewsButton.assertElementPresent(18);
+        rewiewsButton.click();
         return reviewsFiveStars.size();
     }
 
